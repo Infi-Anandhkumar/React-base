@@ -36,7 +36,7 @@
 
 // src/App.tsx
 import React from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation, BrowserRouter } from 'react-router-dom';
 import { Form, Input, DatePicker, Select, Button, message, Descriptions } from 'antd';
 import dayjs from 'dayjs';
 import 'antd/dist/reset.css';
@@ -141,6 +141,17 @@ const Confirmation: React.FC = () => {
   );
 };
 
+
+// const App: React.FC = () => {
+//   const isStorybook = !!import.meta.env.STORYBOOK;
+//   const content = (
+//     <Routes>
+//       <Route path="/" element={<BookingForm />} />
+//       <Route path="/confirm" element={<Confirmation />} />
+//     </Routes>
+//   )
+//     return isStorybook ? content : <BrowserRouter>{content}</BrowserRouter>;
+// }
 
 const App: React.FC = () => (
   // <BrowserRouter>
