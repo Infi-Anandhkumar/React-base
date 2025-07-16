@@ -36,11 +36,11 @@
 
 // src/App.tsx
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Form, Input, DatePicker, Select, Button, message, Descriptions } from 'antd';
 import dayjs from 'dayjs';
 import 'antd/dist/reset.css';
+import ItineraryConfirm from './pages/ItineraryConfirm/ItineraryConfirm';
 
 const { Option } = Select;
 
@@ -141,13 +141,15 @@ const Confirmation: React.FC = () => {
   );
 };
 
+
 const App: React.FC = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<BookingForm />} />
-      <Route path="/confirm" element={<Confirmation />} />
-    </Routes>
-  </BrowserRouter>
+  // <BrowserRouter>
+    // <Routes>
+    //   <Route path="/" element={<BookingForm />} />
+    //   <Route path="/confirm" element={<Confirmation />} />
+    // </Routes>
+    <ItineraryConfirm />
+  // </BrowserRouter>
 );
 
 export default App
